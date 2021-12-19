@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleGame.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <title>RPS Game</title>
+</head>
+<body>
+    <main id="game">
+        <section id="computer">
+            <div id="computerVar">
+                <p class="points" id="computerPoints">0</p>
+                <h2 class="players">COMPUTER</h2>
+            </div>
+            <div id="resultComputer">
+            </div>
+        </section>
+
+        <div id="divisor">
+            <div class="lines"></div>
+            <p class="announcer">Select</p>
+            <div class="lines"></div>
+        </div>
+
+        <section id="human">
+            <div id="rockPaperScissors">
+                <button class="options" id="rock">rock<img src="/Images/rock.png" alt="rock"></button>
+                <button class="options "id="paper">paper<img src="/Images/paper.png" alt="paper"></button>
+                <button class="options" id="scissors">scissors<img src="/Images/scissors.png" alt="scissors"></button>
+            </div>
+            <div id="humanVar">
+                <h2 class="players">HUMAN</h2>
+                <p class="points" id="humanPoints">0</p>
+            </div>
+            
+        </section>
+        <script src="/gameFolder/gameScript.js"></script>
+    </main>
+</body>
+</html>
