@@ -17,7 +17,6 @@ body{
 }
 
 #game{
-    position: relative;
     max-width: 1724px;
     width: 90%;
     max-height: 926px;
@@ -111,20 +110,24 @@ body{
 }
 
 img{
-    width: 150px;
+    width: 80%;
 }
 
 .options{
     background-color: #0C1713;
     border: none;
-    border-radius: 50px;
-    width: 200px;
-    height: 200px;
+    border-radius: 30px;
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    height: 100%;
     transition: 0.1s;
+    padding: 0px;
+    margin: 10px 60px 10px 60px;
 }
 
 .options:hover{
-    scale: 1.05;
+    scale: 1.1;
 }
 
 #resultComputer{
@@ -132,6 +135,13 @@ img{
     height: 200px;
     border-radius: 50px;
     background-color: #0C1713;
+}
+
+#rockPaperScissors{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 @keyframes fadeTrans {

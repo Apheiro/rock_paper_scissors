@@ -3,18 +3,24 @@ The big comments are to help me remember what are the functionalities of the cod
 new to programming (づ￣ 3￣)づ
 */
 
-let computerPoints = document.querySelector("#computerPoints");
-let humanPoints = document.querySelector("#humanPoints");;
+const rps = ["rock", "paper", "scissors"];
+let computerPoints = 0;
+let humanPoints = 0;
+let result;
+let roundStage = 0;
+
+/*
+Global scope variables
+*/
 
 function computerPlay() {
 
     function ranNumber() {
-        let number = Math.floor(Math.random() * 3);
-    return number;
+        let number = Math.floor(Math.random() * rps.length);
+        return number;
     }
 
-    const rps = ["rock","paper","scissors"];
-    return rps[ranNumber()];
+    return rps[ranNumber()]
 }
 
 /*
@@ -24,26 +30,32 @@ math.floor that is in charge to erase all the decimals of the result of the mult
 result serves to select in the index of my array 
 */
 
-function playRound(playerSelection, computerSelection) {
-    let result;
-    computerSelection = computerPlay()
+function playRound(humanSelection) {
+    const computerSelection = computerPlay()
+    humanSelection = humanSelection.toLowerCase()
 
-    if (playerSelection == computerSelection) {
+    if (humanSelection != "rock" && humanSelection != "paper" && humanSelection != "scissors") {
+        result = "Put your choice rock-paper-scissors"
+
+    } else if (humanSelection == computerSelection) {
         result = "tie";
+        roundStage++
 
-    } else if ( 
-    (playerSelection == "rock" && computerSelection == "scissors") || 
-    (playerSelection == "scissors" && computerSelection == "paper") || 
-    (playerSelection == "paper" && computerSelection == "rock")) {
+    } else if (
+        (humanSelection == "rock" && computerSelection == "scissors") ||
+        (humanSelection == "scissors" && computerSelection == "paper") ||
+        (humanSelection == "paper" && computerSelection == "rock")) {
+        humanPoints++
+        roundStage++
         result = "You Win!";
-        
+
 
     } else {
-        result = "You Lost";
-        
-    }
-    console.log(result)
+        computerPoints++
+        roundStage++
+        result = "You Lose";
 
+    }
 }
 
 /*
@@ -53,4 +65,19 @@ console.log shows the result. (this variable and console.log is only for test my
 this can be change!!)
 */
 
+function game() {
+    while (humanPoints < 5 && computerPoints < 5) {
+        playRound(prompt("What is your choice?"))
+        console.log(humanPoints)
+        console.log(computerPoints)
+        if (humanPoints < 5) {
+            console.log(result)
+        } else if (humanPoints == 5) {
+            console.log("YOU WON!")
+        } else if (computerPoints == 5) {
+            console.log("YOU LOST")
+        }
+    }
+}
 
+game()
