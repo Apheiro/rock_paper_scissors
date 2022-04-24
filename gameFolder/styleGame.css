@@ -101,8 +101,8 @@ body{
     font-size: 43px;
     margin: 0px 20px 0px 35px;
     color: #FDE74C;
-    transition: all 1s cubic-bezier(.3, 1.12, 0, .99);
-    animation: set;
+    transition: all 2s cubic-bezier(.3, 1.12, 0, .99);
+    animation: fadeTrans2;
     animation-duration: 1s;
     
 }
@@ -110,9 +110,22 @@ body{
 .lines{
     border: 1px solid #FDE74C ;
     width: 323px;
-    transition: all 1s cubic-bezier(.3, 1.12, 0, .99);
-    animation: set;
+    transition: all 2s cubic-bezier(.3, 1.12, 0, .99);
+    animation: fadeTrans2;
     animation-duration: 1s;
+}
+
+.resultComputerClass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    background-color: #0C1713;
+    
+    
 }
 
 .announcerWin {
@@ -140,6 +153,7 @@ img{
     width: 80%;
 }
 
+
 .options{
     background-color: #0C1713;
     border: none;
@@ -151,24 +165,36 @@ img{
     transition: 0.1s;
     padding: 0px;
     margin: 10px 60px 10px 60px;
+    transition: all 0.5s;
+    cursor:pointer;
+}
+
+.optionSelection {
+    background-color: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    animation: fadeTrans3 forwards;
+    animation-duration: 1.5s;
+    
 }
 
 .options:hover{
-    transform: scale(1.05);
+    transform: scale(1.2);
 }
 
-#resultComputer{
-    width: 200px;
-    height: 200px;
-    border-radius: 50px;
-    background-color: #0C1713;
-}
+
 
 #rockPaperScissors{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.deleteAnimation{
+    transition:all 0.5s;
+    opacity: 0;
+    transform: scale(1.5);
+    pointer-events: none;
 }
 
 
@@ -186,7 +212,7 @@ img{
     }
    }
 
-@keyframes set {
+@keyframes fadeTrans2 {
     from {
         opacity: 0;
         transform: translateY(-20px);
@@ -196,4 +222,16 @@ img{
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+@keyframes fadeTrans3 {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(1.5);
+    }
+        
+    to {
+        opacity: 1;
+        transform: translateY(0px) scale(1.5);
+    }   
 }
