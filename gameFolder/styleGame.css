@@ -169,12 +169,23 @@ img{
     cursor:pointer;
 }
 
+.rotate{
+    transform: rotate(180deg);
+}
+
 .optionSelection {
     background-color: rgba(0, 0, 0, 0);
     pointer-events: none;
     animation: fadeTrans3 forwards;
     animation-duration: 1.5s;
     
+}
+
+.optionSelectionComp{
+    background-color: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    animation: fadeTrans4 forwards;
+    animation-duration: 1.5s;
 }
 
 .options:hover{
@@ -234,4 +245,16 @@ img{
         opacity: 1;
         transform: translateY(0px) scale(1.5);
     }   
+}
+
+@keyframes fadeTrans4 {
+        from {
+            opacity: 0;
+            transform: translateY(0px) scale(1.5) rotate(180deg);
+        }
+        
+        to {
+            opacity: 1;
+            transform: translateY(-20px) scale(1.5) rotate(180deg);
+        }
 }

@@ -60,8 +60,8 @@ function animation() {
         btn[1].classList.add('optionSelection');
         btn[1].innerHTML = `<img src="../Images/${humanSelection}.png" alt='${humanSelection}'></>`;
         computerSelection.classList.remove('deleteAnimation');
-        computerSelection.classList.add('optionSelection');
-        computerSelection.style = 'rotate: 180deg;'
+        computerSelection.classList.add('optionSelectionComp');
+        //computerSelection.style = 'transform: rotate(180deg);'
         computerSelection.innerHTML = `<img src="../Images/${computerPlaySelec}.png" alt='${computerPlaySelec}'></>`;
     }, 2000);
   
@@ -71,8 +71,8 @@ function animation() {
         btn.forEach(button => button.classList.remove("deleteAnimation"));
         btn[1].classList.remove('optionSelection');
         btn[1].innerHTML = `<img src="../Images/paper.png" alt='paper'></>`;
-        computerSelection.style = 'rotate: 0deg;'
-        computerSelection.classList.remove('optionSelection');
+        //computerSelection.style = 'transform: rotate(180deg);'
+        computerSelection.classList.remove('optionSelectionComp');
         computerSelection.innerHTML = `（╬ಠ益ಠ）`;
     }, 5500);
 
@@ -114,7 +114,7 @@ function game(humanSelection, computerPlaySelec) {
         setTimeout(() => {
             const retryMenu = document.createElement('div');
             retryMenu.style = "display:flex; align-items:center; justify-content:center; flex-direction: column;"
-            retryMenu.innerHTML = `<h1 class="announcerWin" style = "font-size: 63px;">YOU WON!</h1> <button onClick="window.location.reload()" style = "cursor:pointer; border:none; border-radius: 17px; background-color:#0C1713; color:#65B891; font-size: 34px; padding: 20px;">retry?</button>`;
+            retryMenu.innerHTML = `<h1 class="announcerWin" style = "font-size: 63px;">YOU WON!</h1> <button onClick="window.location.reload()" style = "cursor:pointer; border:none; border-radius: 17px; background-color:#0C1713; color:#65B891; font-size: 34px; padding: 20px; ">retry?</button>`;
             main.style = "display:flex; justify-content: center; flex-direction: none;"
             main.appendChild(retryMenu);
             
@@ -127,7 +127,7 @@ function game(humanSelection, computerPlaySelec) {
         setTimeout(() => {
             const retryMenu = document.createElement('div');
             retryMenu.style = "display:flex; align-items:center; justify-content:center; flex-direction: column;"
-            retryMenu.innerHTML = `<h1 class="announcerLose" style = "font-size: 63px; transform: translateX(15px);">YOU LOST!</h1> <button onClick="window.location.reload()" style = "cursor:pointer; border:none; border-radius: 17px; background-color:#0C1713; color:#CC2936; font-size: 34px; padding: 20px;">retry?</button>`;
+            retryMenu.innerHTML = `<h1 class="announcerLose" style = "font-size: 63px;">GAME OVER</h1> <button onClick="window.location.reload()" style = "cursor:pointer; border:none; border-radius: 17px; background-color:#0C1713; color:#CC2936; font-size: 34px; padding: 20px;">retry?</button>`;
             main.style = "display:flex; justify-content: center; flex-direction: none;"
             main.appendChild(retryMenu);
             
