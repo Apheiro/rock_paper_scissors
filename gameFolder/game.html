@@ -15,35 +15,35 @@
 
 <body>
     <main id="game">
-        <section id="computer">
-            <div id="computerVar">
-                <p class="points" id="computerPoints">0</p>
-                <h2 class="players">COMPUTER</h2>
+        <section id="computerVar">
+            <p class="points" id="computerPoints">0</p>
+            <h2 class="players">COMPUTER</h2>
+        </section>
+
+        <section class="game" id="gameItems">
+
+            <div id="computer">
+                <div id="resultComputer" class="resultComputerClass">（╬ಠ益ಠ）
+                </div>
             </div>
-            <div id="resultComputer" class="resultComputerClass">（╬ಠ益ಠ）
+            <div id="divisor" class="divisor">
+                <div class="lines"></div>
+                <p id="announcer" class="announcerState">Select</p>
+                <div class="lines"></div>
+            </div>
+            <div id="human">
+                <div class="rockPaperScissors">
+                    <button class="options" id="rock"><img src="../Images/rock.png" alt="rock"></button>
+                    <button class="options " id="paper"><img src="../Images/paper.png" alt="paper"></button>
+                    <button class="options" id="scissors"><img src="../Images/scissors.png" alt="scissors"></button>
+                </div>
             </div>
         </section>
 
-        <div id="divisor">
-            <div class="lines"></div>
-            <p id="announcer" class="announcerState">Select</p>
-            <div class="lines"></div>
-        </div>
-
-        <section id="human">
-            <div id="rockPaperScissors">
-                <button class="options" id="rock"><img src="../Images/rock.png" alt="rock"></button>
-                <button class="options " id="paper"><img src="../Images/paper.png" alt="paper"></button>
-                <button class="options" id="scissors"><img src="../Images/scissors.png" alt="scissors"></button>
-                
-            </div>
-            <div id="humanVar">
-                <h2 class="players">HUMAN</h2>
-                <p class="points" id="humanPoints">0</p>
-            </div>
-
+        <section id="humanVar">
+            <h2 class="players">HUMAN</h2>
+            <p class="points" id="humanPoints">0</p>
         </section>
-        
     </main>
 </body>
 
