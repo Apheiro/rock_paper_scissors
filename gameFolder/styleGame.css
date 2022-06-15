@@ -138,6 +138,7 @@ body{
     border-radius: 50px;
     background-color: #0C1713;
     transition: all .35s;
+    white-space: nowrap;
 }
 
 .announcerWin {
