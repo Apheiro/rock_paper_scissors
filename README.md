@@ -1,14 +1,31 @@
-# Rock Paper Scissors ( ͡• ͜ʖ ͡• )
+#
 
-This is my first JS proyect.
+<h1 align="center">Rock Paper Scissors</h1>
 
-Acquired knowledge:</br>
-● Use of addEventListeners.</br>
-● Make animations in CSS.</br>
-● Use of different methods.</br>
-● What 'this' means in different contexts.</br>
+![](./Preview/thumbnail.png)
 
-Images preview:</br>
-![](./Preview/Screen%20Shot%202022-05-30%20at%2000.37.52.png)
-![](./Preview/Screen%20Shot%202022-05-30%20at%2000.37.55.png)
-![](./Preview/Screen%20Shot%202022-05-30%20at%2000.38.02.png)
+<p align="center">
+  Rock Paper Scissors for <a href="https://www.theodinproject.com/">The Odin Project</a>
+</p>
+
+## Demo
+
+👁️ [Live Demo](https://apheiro.github.io/rock_paper_scissors/)
+
+## Built with
+
+- JavaScript
+- Css
+- Html
+
+## Features
+
+- Responsive design.
+- Clean desing.
+- smooth animations.
+
+## Screenshots
+
+![](./Preview/presentation.png)
+![](./Preview/Screenshot.png)
+![](./Preview/Screenshot1.png)
