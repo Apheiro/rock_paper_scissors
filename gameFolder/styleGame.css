@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     font-family: 'Press Start 2P', cursive;
     text-decoration: none;
@@ -8,7 +8,7 @@
     user-select: none;
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -17,7 +17,7 @@ body{
     background-color: #0C1713;
 }
 
-#game{
+#game {
     max-width: 1724px;
     width: 90%;
     max-height: 926px;
@@ -31,27 +31,26 @@ body{
     padding: 20px;
 }
 
-#divisor{
+#divisor {
     display: flex;
     align-items: center;
     justify-content: center;
     max-width: 945px;
-    width:100%;
+    width: 100%;
     animation: fadeTrans;
     animation-duration: 1s;
 }
 
-.game{
+.game {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    
 }
 
-.points{
+.points {
     border-radius: 34px;
     background-color: #0C1713;
     width: 118px;
@@ -69,7 +68,7 @@ body{
     transition: all .35s;
 }
 
-#computer{
+#computer {
     width: 100%;
     animation: fadeTrans;
     animation-duration: 1s;
@@ -79,7 +78,7 @@ body{
     justify-content: start;
 }
 
-#human{
+#human {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,7 +87,7 @@ body{
     animation-duration: 1s;
 }
 
-.rockPaperScissors{
+.rockPaperScissors {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,14 +96,14 @@ body{
     margin: 0px 20px;
 }
 
-#computerVar{
+#computerVar {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-#humanVar{
+#humanVar {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -119,7 +118,7 @@ body{
     animation-duration: 1s;
 }
 
-.lines{
+.lines {
     border: 1px solid #FDE74C;
     margin: 0px 10px;
     transition: all 2s cubic-bezier(.3, 1.12, 0, .99);
@@ -128,7 +127,7 @@ body{
     flex: 1 1;
 }
 
-.resultComputerClass{
+.resultComputerClass {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,12 +161,11 @@ body{
     animation-duration: 1s;
 }
 
-img{
+img {
     width: 80%;
 }
 
-
-.options{
+.options {
     background-color: #0C1713;
     border: none;
     border-radius: 30px;
@@ -176,13 +174,12 @@ img{
     transition: 0.1s;
     padding: 0px;
     transition: all .35s;
-    cursor:pointer;
+    cursor: pointer;
     margin: 5px;
 }
 
-.rotate{
+.rotate {
     transform: rotate(180deg);
-    
 }
 
 .optionSelection {
@@ -190,48 +187,44 @@ img{
     pointer-events: none;
     animation: fadeTrans3 forwards;
     animation-duration: 1.5s;
-    
 }
 
-.optionSelectionComp{
+.optionSelectionComp {
     background-color: rgba(0, 0, 0, 0);
     pointer-events: none;
     animation: fadeTrans4 forwards;
     animation-duration: 1.5s;
 }
 
-.options:hover{
+.options:hover {
     transform: scale(1.2);
 }
 
-
-
-#rockPaperScissors{
+#rockPaperScissors {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.deleteAnimation{
-    transition:all 0.5s;
+.deleteAnimation {
+    transition: all 0.5s;
     opacity: 0;
     transform: scale(1.5);
     pointer-events: none;
-    
 }
 
 @keyframes fadeTrans {
-    from{
+    from {
         opacity: 0;
         transform: translateY(-20px);
     }
-   
+
     to {
         opacity: 1;
         transform: translateY(0px);
     }
-   }
+}
 
 @keyframes fadeTrans2 {
     from {
@@ -250,62 +243,64 @@ img{
         opacity: 0;
         transform: translateY(-20px) scale(1.5);
     }
-        
+
     to {
         opacity: 1;
         transform: translateY(0px) scale(1.5);
-    }   
+    }
 }
 
 @keyframes fadeTrans4 {
-        from {
-            opacity: 0;
-            transform: translateY(0px) scale(1.5) rotate(180deg);
-        }
-        
-        to {
-            opacity: 1;
-            transform: translateY(-20px) scale(1.5) rotate(180deg);
-        }
+    from {
+        opacity: 0;
+        transform: translateY(0px) scale(1.5) rotate(180deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-20px) scale(1.5) rotate(180deg);
+    }
 }
 
 @media (max-width: 800px) {
     .points {
         border-radius: 18px;
         background-color: #0C1713;
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 32px;
+        font-size: 25px;
     }
+
     .players {
-        font-size: 30px;
+        font-size: 20px;
         margin: 0px 10px;
     }
 
     .announcerState {
-        font-size: 35px;
+        font-size: 20px;
     }
-    .rockPaperScissors{
+
+    .rockPaperScissors {
         justify-content: center;
     }
 
     .options {
         border-radius: 18px;
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 
     .resultComputerClass {
-        font-size: 23px;
-        width: 121px;
-        height: 120px;
+        font-size: 19px;
+        width: 105px;
+        height: 100px;
         border-radius: 18px;
     }
 
-    .game{
+    .game {
         justify-content: space-evenly;
     }
 }
